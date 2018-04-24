@@ -7,9 +7,13 @@ import router from './router'
 import './assets/css/bootstrap.min.css'
 import './assets/fonts/glyphicons-halflings-regular.eot'
 import './assets/css/global.css'
+
+import echarts from 'echarts'
 // import header from './components/header'
 
 Vue.config.productionTip = false
+
+Vue.prototype.$echarts = echarts
 
 /* eslint-disable no-new */
 new Vue({

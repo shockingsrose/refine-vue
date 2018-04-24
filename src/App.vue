@@ -1,21 +1,25 @@
 <template>
   <div id="app">
     <Header></Header>
-    <div>
+    <!-- <div>
       <router-link to='/'>index</router-link>
       <router-link to='/first'>firstPage</router-link>
       <router-link to='/second'>secondPage</router-link>
-    </div>
+    </div> -->
     <router-view/>
+    <myFooter></myFooter>
   </div>
 </template>
 
 <script>
 import Header from './components/header'
+import myFooter from './components/my-footer'
+
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    myFooter
   }
 }
 </script>

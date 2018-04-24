@@ -1,19 +1,23 @@
 <template>
-  <nav>
-    <div class="container">
-      <span class="float-l">精细化分析工具</span>
-      <ul>
-        <li :class="{'active':navState.user}" @click="switchNav(0)">
-          <router-link to='/'>用户</router-link>
-        </li>
-        <li :class="{'active':navState.analysis}" @click="switchNav(1)">
-          <router-link to='/'>分析</router-link>
-        </li>
-      </ul>
-    </div>
-
-  </nav>
+  <div>
+    <nav>
+      <div class="container">
+        <span class="float-l">精细化分析工具</span>
+        <!-- <slot>{{msg}}</slot> -->
+        <ul>
+          <li :class="{'active':navState.user}" @click="switchNav(0)">
+            <router-link to='/'>用户</router-link>
+          </li>
+          <li :class="{'active':navState.analysis}" @click="switchNav(1)">
+            <router-link to='/echarts'>分析</router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="space-50"></div>
+  </div>
 </template>
+
 <script>
 export default {
   name: 'div_header',
@@ -52,6 +56,11 @@ nav {
   line-height: 50px;
   background-color: #354052;
   color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 20;
 }
 nav ul {
   display: inline-block;
