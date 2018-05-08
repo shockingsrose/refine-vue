@@ -9,11 +9,15 @@ import './assets/fonts/glyphicons-halflings-regular.eot'
 import './assets/css/global.css'
 
 import echarts from 'echarts'
+import axios from 'axios'
 // import header from './components/header'
 
 Vue.config.productionTip = false
 
 Vue.prototype.$echarts = echarts
+// 携带cookie
+axios.defaults.withCredentials = true
+Vue.prototype.$axios = axios
 
 /* eslint-disable no-new */
 new Vue({

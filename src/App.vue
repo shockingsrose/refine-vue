@@ -6,7 +6,10 @@
       <router-link to='/first'>firstPage</router-link>
       <router-link to='/second'>secondPage</router-link>
     </div> -->
-    <router-view/>
+    <div class="wrap">
+      <router-view/>
+    </div>
+
     <myFooter></myFooter>
   </div>
 </template>
@@ -31,5 +34,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
+}
+.wrap {
+  min-height: calc(100% - 100px);
 }
 </style>

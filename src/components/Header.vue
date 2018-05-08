@@ -11,6 +11,9 @@
           <li :class="{'active':navState.analysis}" @click="switchNav(1)">
             <router-link to='/echarts'>分析</router-link>
           </li>
+          <li :class="{'active':navState.action}" @click="switchNav(2)">
+            <router-link to='/action'>行为</router-link>
+          </li>
         </ul>
       </div>
     </nav>
@@ -26,7 +29,8 @@ export default {
       msg: 'this is a vue components——header',
       navState: {
         user: true,
-        analysis: false
+        analysis: false,
+        action: false
       }
     }
   },
@@ -38,10 +42,17 @@ export default {
         case 0:
           this.navState.user = true
           this.navState.analysis = false
+          this.navState.action = false
           break
         case 1:
           this.navState.user = false
           this.navState.analysis = true
+          this.navState.action = false
+          break
+        case 2:
+          this.navState.user = false
+          this.navState.analysis = false
+          this.navState.action = true
           break
         default:
           break
@@ -72,6 +83,9 @@ nav ul li {
 nav ul li a {
   font-size: 16px;
   color: #fff;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 nav ul li:hover {
   cursor: pointer;
