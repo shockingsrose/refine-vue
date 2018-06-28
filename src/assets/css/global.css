@@ -7,7 +7,6 @@
 
 html {
   font-size: 10px;
-  height: 100%;
 }
 
 body {
@@ -16,7 +15,6 @@ body {
   text-indent: 0 !important;
   font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif, 'SimSun';
   line-height: 1.75;
-  height: 100%;
 }
 
 article,
