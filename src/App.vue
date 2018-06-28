@@ -9,20 +9,27 @@
     <div class="wrap">
       <router-view/>
     </div>
-
-    <myFooter></myFooter>
+    <myFooter>
+      <span @click="slotClickEvent" slot="firstSlot">this is first slot</span>
+      <span @click="slotClickEvent" slot="secondSlot">this is second slot</span>
+    </myFooter>
   </div>
 </template>
 
 <script>
 import Header from './components/header'
 import myFooter from './components/my-footer'
-
+/* eslint-disable */
 export default {
   name: 'App',
   components: {
     Header,
     myFooter
+  },
+  methods: {
+    slotClickEvent() {
+      console.log('this is a slot')
+    }
   }
 }
 </script>

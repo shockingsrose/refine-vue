@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
+
 // 引入全局CSS
 import './assets/css/bootstrap.min.css'
 import './assets/fonts/glyphicons-halflings-regular.eot'
@@ -23,6 +25,9 @@ Vue.prototype.$axios = axios
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  store,
+  components: {
+    App
+  },
   template: '<App/>'
 })
