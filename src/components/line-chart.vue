@@ -1,46 +1,29 @@
 <template>
-  <div>
-    <!-- <div @click='drawLine'>click</div> -->
-    <div :id="chart" :style="{height:'500px'}"></div>
-  </div>
+    <div id="myChart" :style="{height:'500px'}"></div>
 </template>
 
 <script>
 export default {
-  props: ['dataList', 'name', 'dateList', 'chart'],
   data () {
     return {
       echarts: this.$echarts
     }
   },
-
-  mounted () {},
-  watch: {
-    // 当数据加载后，再执行画图函数
-    dataList (curVal, oldVal) {
-      this.drawLine()
-    }
-  },
-  computed: {
-    datas: function () {
-      return this.dataList
-    },
-    dates: function () {
-      return this.dateList
-    }
+  mounted () {
+    this.drawLine()
   },
   methods: {
     drawLine () {
-      let myChart = this.$echarts.init(document.getElementById(this.chart))
+      let myChart = this.$echarts.init(document.getElementById('myChart'))
       let option = {
         title: {
-          text: `${this.name}折线图`
+          text: '折线图堆叠'
         },
         tooltip: {
           trigger: 'axis'
         },
         legend: {
-          data: [this.name]
+          data: ['注册事件', '登录事件', '付款事件']
         },
         grid: {
           left: '3%',
@@ -56,17 +39,29 @@ export default {
         xAxis: {
           type: 'category',
           boundaryGap: false,
-          data: this.dates
+          data: ['04-20', '04-21', '04-22', '04-23', '04-24', '04-25', '04-26']
         },
         yAxis: {
           type: 'value'
         },
         series: [
           {
-            name: this.name,
+            name: '注册事件',
             type: 'line',
             stack: '总量',
-            data: this.datas
+            data: [120, 132, 101, 134, 90, 230, 210]
+          },
+          {
+            name: '登录事件',
+            type: 'line',
+            stack: '总量',
+            data: [220, 182, 191, 234, 290, 330, 310]
+          },
+          {
+            name: '付款事件',
+            type: 'line',
+            stack: '总量',
+            data: [150, 232, 201, 154, 190, 330, 410]
           }
         ]
       }
