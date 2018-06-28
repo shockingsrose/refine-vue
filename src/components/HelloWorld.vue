@@ -61,9 +61,14 @@
 import divHeader from '../components/header'
 export default {
   name: 'HelloWorld',
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      arr: [{ a: 1 }, { b: 1 }],
+      arrow: () => {
+        this.arr++
+        return this.arr
+      }
     }
   },
   components: {
