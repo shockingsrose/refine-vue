@@ -7,8 +7,7 @@ import echarts from '../views/echarts.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'index',
       component: index
@@ -18,6 +17,18 @@ export default new Router({
       path: '/echarts',
       name: 'echarts',
       component: echarts
+    },
+    {
+      path: '/slotScope',
+      name: '作用域插槽',
+      component: () =>
+        import ('../views/slotScope.vue')
+    },
+    {
+      path: '/promise',
+      name: 'promise bluebird demo',
+      component: () =>
+        import ('../views/promise_bluebild.vue')
     }
   ]
 })

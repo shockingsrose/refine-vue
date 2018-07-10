@@ -6,7 +6,6 @@
       <router-link to='/first'>firstPage</router-link>
       <router-link to='/second'>secondPage</router-link>
     </div> -->
-<<<<<<< HEAD
     <div class="wrap">
       <router-view/>
     </div>
@@ -14,10 +13,6 @@
       <span @click="slotClickEvent" slot="firstSlot">this is first slot</span>
       <span @click="slotClickEvent" slot="secondSlot">this is second slot</span>
     </myFooter>
-=======
-    <router-view/>
-    <myFooter></myFooter>
->>>>>>> parent of 135acc2... 完成
   </div>
 </template>
 

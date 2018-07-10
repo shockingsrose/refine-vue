@@ -9,13 +9,17 @@ import store from './store'
 import './assets/css/bootstrap.min.css'
 import './assets/fonts/glyphicons-halflings-regular.eot'
 import './assets/css/global.css'
+import 'iview/dist/styles/iview.css';
 
 import echarts from 'echarts'
-// import header from './components/header'
+import iview from 'iview';
+import promise from 'bluebird';
 
 Vue.config.productionTip = false
-
 Vue.prototype.$echarts = echarts
+
+
+Vue.use(iview);
 
 /* eslint-disable no-new */
 new Vue({
