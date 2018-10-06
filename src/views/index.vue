@@ -26,34 +26,51 @@
         </table>
       </div>
     </div>
+
+    <div>index里的value为： {{value}}</div>
+    <button @click="handleSyncChange">点击改变父组件的value</button>
+    <sync :value.sync="value"></sync>
+
+    <validate></validate>
   </div>
 
 </template>
 <script>
-import data from '../assets/json/list.json'
+  import data from '../assets/json/list.json'
+  import sync from '../components/sync'
+  import validate from '../components/validate.vue'
 
-export default {
-  data () {
-    return {
-      msg: 'index',
-      list: data.list
-    }
-  },
-  computed: {
-    peopleCount () {
-      return this.list.length
+  export default {
+    components: { sync, validate },
+    data() {
+      return {
+        msg: 'index',
+        list: data.list,
+        value: '父组件的value',
+      }
+    },
+    computed: {
+      peopleCount() {
+        return this.list.length
+      },
+
+    },
+    methods: {
+      handleSyncChange() {
+        this.value = '父组件改变了value'
+      }
+
     }
   }
-}
 </script>
 
 <style scoped>
-.container-fluid {
-  min-height: 1000px;
-}
-th {
-  text-align: center;
-  font-weight: 900;
-  padding: 8px;
-}
+  .container-fluid {
+  	min-height: 1000px;
+  }
+  th {
+  	text-align: center;
+  	font-weight: 900;
+  	padding: 8px;
+  }
 </style>
