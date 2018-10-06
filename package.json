@@ -1,5 +1,5 @@
 {
-  "name": "vue",
+  "name": "vues",
   "version": "1.0.0",
   "description": "vue [rpject demo",
   "author": "shockingsrose <847073376@qq.com>",
@@ -13,8 +13,12 @@
   "dependencies": {
     "echarts": "^4.0.4",
     "eslint": "^4.19.1",
-    "vue": "^2.5.2",
+    "highcharts": "^6.1.1",
+    "iview": "^2.14.3",
+    "pug": "^2.0.3",
+    "vue": "^2.3.4",
     "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.3.4",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -58,7 +62,6 @@
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",

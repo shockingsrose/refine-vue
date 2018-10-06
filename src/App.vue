@@ -17,29 +17,29 @@
 </template>
 
 <script>
-import Header from './components/header'
-import myFooter from './components/my-footer'
-/* eslint-disable */
-export default {
-  name: 'App',
-  components: {
-    Header,
-    myFooter
-  },
-  methods: {
-    slotClickEvent() {
-      console.log('this is a slot')
+  import { Header } from './components'
+  import myFooter from './components/my-footer'
+  /* eslint-disable */
+  export default {
+    name: 'App',
+    components: {
+      Header,
+      myFooter
+    },
+    methods: {
+      slotClickEvent() {
+        console.log('this is a slot')
+      }
     }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #app {
+  	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  	text-align: center;
+  	color: #2c3e50;
+  }
 </style>
