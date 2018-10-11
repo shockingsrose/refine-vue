@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 1.修改test.txt 
 2.连续提交第二次修改 并提交分支
-
-=======
 1.从master分支上创建了experiment分支，并修改test.txt文件
 2.push远程 ，重新开始。
 3.修改test.txt文件
 4.experiment分支已修改该文件
->>>>>>> master！！！
+
+
+
