@@ -1,1 +1,3 @@
 1.从master分支上创建了experiment分支，并修改test.txt文件
+2.push远程 ，重新开始。
+3.修改test.txt文件
