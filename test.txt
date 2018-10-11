@@ -1,4 +1,1 @@
-去掉了github上的公钥 应该无权限上传了
-但是结果是还是能上传
-重启了vscode
-改了user.name 再试
+1.从master分支上创建了experiment分支，并修改test.txt文件
