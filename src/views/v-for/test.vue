@@ -12,6 +12,7 @@
                 date: Date.now(),
             };
         },
+        // 1
         updated() {
             console.log(this.date);
         },
