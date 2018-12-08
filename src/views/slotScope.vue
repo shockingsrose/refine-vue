@@ -4,8 +4,8 @@
 </template>
 <script>
 
-import slotParent from '../components/slot_parent';
-export default {
-    components: { slotParent }
-}
+    import slotParent from '../components/slot_parent';
+    export default {
+        components: { slotParent }
+    }
 </script>

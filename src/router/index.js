@@ -78,6 +78,26 @@ export default new Router({
       path: '/checkbox',
       name: 'checkbox多级联调',
       component: () => import('../views/checkbox.vue')
+    },
+    {
+      path: '/sync',
+      name: 'sync修饰符',
+      component: () => import('../views/sync/parent.vue')
+    },
+    {
+      path: '/keep-alive',
+      name: '动态组件',
+      component: () => import('../views/动态组件/index.vue')
+    },
+    {
+      path: '/select',
+      name: 'select',
+      component: () => import('../views/select.vue')
+    },
+    {
+      path: '/v-for',
+      name: 'vfor key值问题',
+      component: () => import('../views/v-for/index.vue')
     }
   ]
 });
