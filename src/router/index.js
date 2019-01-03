@@ -98,6 +98,16 @@ export default new Router({
       path: '/v-for',
       name: 'vfor key值问题',
       component: () => import('../views/v-for/index.vue')
+    },
+    {
+      path: '/scroll',
+      name: 'scroll',
+      component: () => import('../views/scrolled.vue')
+    },
+    {
+      path: '/export',
+      name: '导出excel',
+      component: () => import('../views/export.vue')
     }
   ]
 });
